@@ -1,0 +1,1 @@
+<a href="$SSocializeURL" title="$ServiceName" rel="nofollow" target="_blank">$Icon</a>
