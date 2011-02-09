@@ -66,7 +66,7 @@ This module currently supports the following share links:
 
 ## Known issues
 
-- Needs I18N support
+- Needs I18N support/customizable link labels
 - Share links need to allow for icon overrides
 - Create share link widget
 - Add more Share Services
