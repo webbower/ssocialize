@@ -1,5 +1,5 @@
 <?php
-//http://twitter.com/?status=Apps+vs.+the+Web:%20http://www.alistapart.com/articles/apps-vs-the-web/
+//http://twitter.com/?status=Apps%20vs.%20the%20Web:%20http://www.alistapart.com/articles/apps-vs-the-web/
 class TweetThis extends SSocializeLink {
     static protected $base_url = 'http://twitter.com/';
 
@@ -21,6 +21,19 @@ class TweetThis extends SSocializeLink {
         }
         return $shortURL->ShortURL;
     }
+
+	public function getPreparedTitle() {
+        return rawurlencode($this->title);
+	}
+
+    protected function buildQueryString() {
+        $queryString = '';
+        
+        if($url_key = $this->stat('url_key')) $queryString .= sprintf('%s=%s%%20%s', $url_key, $this->getPreparedTitle(), $this->getPreparedLink());
+
+        return $queryString;
+    }
+
     
 }
 
