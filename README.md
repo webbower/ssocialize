@@ -1,4 +1,4 @@
-# SSocialize Module 0.1
+# SSocialize Module 0.1.1
 
 ## Maintainer Contact
 
@@ -22,34 +22,36 @@ forum
 
 ## Usage Overview
 
+### Share Links
+
 In your _config.php file, call SSocialize::these() passing it a string of a single or an array of multiple SiteTree subclasses.
 
-SSocialize::these('MyPage');
+	SSocialize::these('MyPage');
 
 OR
 
-SSocialize::these(array('MyPage', 'MyOtherPage'));
+	SSocialize::these(array('MyPage', 'MyOtherPage'));
 
 You can define groups of share links to easily reference in your templates.
 
-SSocialize::add_to_group('TweetThis'); // Adds the TweetThis share link to the "Default" group
-SSocialize::add_to_group(array('DiggThis', 'FacebookShare'), 'BlogPages'); // Adds the DiggThis and FacebookShare links to the "BlogPages" group.
+	SSocialize::add_to_group('TweetThis'); // Adds the TweetThis share link to the "Default" group
+	SSocialize::add_to_group(array('DiggThis', 'FacebookShare'), 'BlogPages'); // Adds the DiggThis and FacebookShare links to the "BlogPages" group.
 
 If you need to use a URL shortener service (bit.ly, ow.ly, etc) for share systems like Twitter, you'll need to define which class handles communication with the URL shortener service for your share links. For example:
 
-TweetThis::set_short_url_class('BitlyURL');
+	TweetThis::set_short_url_class('BitlyURL');
 
 Most URL shortener APIs require an account. When you have one, you'll usually need an API key and your username. You can set those for the URL shortener class you use. For example:
 
-BitlyURL::set_shortener_params('API Key', 'Username');
+	BitlyURL::set_shortener_params('API Key', 'Username');
 
 The URL shortener classes handle fetching and locally storing the shortened URLs
 
 In your template, you can call the following variables:
 
-$SSocializeLinkGroup // Outputs the links assigned to the "Default" group
-$SSocializeLinkGroup(BlogPages) // Outputs the links assigned to the "BlogPages" group
-$SSocializeLink(TweetThis) // Outputs a Tweet This link
+	$SSocializeLinkGroup // Outputs the links assigned to the "Default" group
+	$SSocializeLinkGroup(BlogPages) // Outputs the links assigned to the "BlogPages" group
+	$SSocializeLink(TweetThis) // Outputs a Tweet This link
 
 This module currently supports the following share links:
 
@@ -64,10 +66,13 @@ This module currently supports the following share links:
 - JmpURL (j.mp)
 - BitlyURL (bit.ly)
 
+### Widget
+
+There is also a widget provided for showing links to social site profiles. The data for it is configured in SiteConfig.
+
 ## Known issues
 
 - Needs I18N support/customizable link labels
 - Share links need to allow for icon overrides
-- Create share link widget
 - Add more Share Services
 - Add Print and Email This Page links
