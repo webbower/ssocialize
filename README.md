@@ -2,7 +2,7 @@
 
 ## Maintainer Contact
 
-Matt Bower (Nickname: webbower, <webbower (at) gmail (dot) com>) 
+Matt Bower (Nickname: webbower, webbower (at) gmail (dot) com) 
 
 ## Requirements
 
