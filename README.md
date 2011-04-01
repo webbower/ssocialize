@@ -10,14 +10,11 @@ SilverStripe 2.4
 
 ## Installation Instructions
 
-1. Place this directory in the root of your SilverStripe installation
-I.e. you will now have the following root folders
-
-assets
-mysite
-cms
-forum
-
+1. Place this directory in the root of your SilverStripe installation. I.e. you will now have the following root folders
+		assets/
+		cms/
+		mysite/
+		ssocialize/
 2. Visit http://www.yoursite.com/dev/build/?flush=1 in your browser (where yoursite.com refers to the URL of your SilverStripe site)
 
 ## Usage Overview
