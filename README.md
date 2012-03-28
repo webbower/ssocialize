@@ -60,16 +60,19 @@ This module currently supports the following share links:
 
 ...and the following URL shortener APIs
 
-- JmpURL (j.mp)
 - BitlyURL (bit.ly)
-
-### Widget
-
-There is also a widget provided for showing links to social site profiles. The data for it is configured in SiteConfig.
 
 ## Known issues
 
 - Needs I18N support/customizable link labels
 - Share links need to allow for icon overrides
-- Add more Share Services
-- Add Print and Email This Page links
+- Add Print and Email This Page links?
+
+## Roadmap
+
+- Add more URL shortener services
+	- awe.sm
+- Add Social Profile Links widget
+	- Links output
+	- Admin GUI
+- Add Admin panel GUI for page sharing links
