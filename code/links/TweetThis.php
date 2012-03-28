@@ -14,7 +14,7 @@ class TweetThis extends SSocializeLink {
 		$shortURLClass = self::get_short_url_class();
         $shortURL = SSocializeShortURL::get_by_site_url($shortURLClass, $pageLink);
         if(!$shortURL) {
-            $shortURL = new $shortURLClass();
+            $shortURL = singleton($shortURLClass);
             $shortURL->SiteURL = $pageLink;
             $shortURL->ShortURL = $shortURL->generateShortURL($pageLink);
             $shortURL->write();
