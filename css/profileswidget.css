@@ -1,0 +1,9 @@
+.socialLinks {
+	margin: 0 0 1em 0 !important;
+}
+
+.socialLinks li {
+	display: inline;
+	display: inline-block;
+	margin: 0 0.75em 0 0 !important;
+}
